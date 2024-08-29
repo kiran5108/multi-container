@@ -1,6 +1,16 @@
 version: 0.2
 phases:
- pre_build:
+  install:
+    runtime-versions:
+      docker: 18
+    commands:
+      - echo Installing Docker 18.x...
+      - curl -fsSL https://download.docker.com/linux/static/stable/x86_64/docker-18.09.9.tgz -o docker.tgz
+      - tar xzvf docker.tgz
+      - sudo mv docker/* /usr/bin/
+      - sudo dockerd & # Start Docker daemon
+      - echo Docker 18.x installed successfully.  
+  pre_build:
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
