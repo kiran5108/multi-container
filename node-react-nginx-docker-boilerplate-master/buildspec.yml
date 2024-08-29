@@ -21,8 +21,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - cd node-react-nginx-docker-boilerplate-master
+      
       - docker-compose --file=docker-compose-prod.yml push
 artifacts:
   files:
-    - 'Dockerrun.aws.json'
+    - 'node-react-nginx-docker-boilerplate-master/Dockerrun.aws.json'
