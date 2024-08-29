@@ -3,21 +3,21 @@
   "containerDefinitions": [
     {
       "name": "client",
-      "image": "145023099713.dkr.ecr.us-east-1.amazonaws.com/test-client",
+      "image": "145023099713.dkr.ecr.us-east-1.amazonaws.com/test-client:latest",
       "hostname": "client",
       "essential": false,
       "memory": 256
     },
     {
       "name": "api",
-      "image": "145023099713.dkr.ecr.us-east-1.amazonaws.com/test-api",
+      "image": "145023099713.dkr.ecr.us-east-1.amazonaws.com/test-api:latest",
       "hostname": "api",
       "essential": false,
       "memory": 128
     },
     {
       "name": "nginx",
-      "image": "145023099713.dkr.ecr.us-east-1.amazonaws.com/test-nginx",
+      "image": "145023099713.dkr.ecr.us-east-1.amazonaws.com/test-nginx:latest",
       "hostname": "nginx",
       "essential": true,
       "portMappings": [
@@ -31,3 +31,5 @@
     }
   ]
 }
+
+
