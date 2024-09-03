@@ -26,3 +26,4 @@ phases:
 artifacts:
   files:
     - './node-react-nginx-docker-boilerplate-master/Dockerrun.aws.json'
+    - './node-react-nginx-docker-boilerplate-master/docker-compose-prod.yml
