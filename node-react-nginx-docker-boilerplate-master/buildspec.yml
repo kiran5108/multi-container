@@ -25,4 +25,4 @@ phases:
       - docker-compose --file=docker-compose-prod.yml push
 artifacts:
   files:
-    - './node-react-nginx-docker-boilerplate-master/Dockerrun.aws.json'
+    - './Dockerrun.aws.json'
